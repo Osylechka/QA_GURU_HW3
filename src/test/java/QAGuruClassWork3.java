@@ -57,9 +57,4 @@ private int getResult(){
     return 3;
 }
 
-//    @BeforeAll
-//    static void beforeAll() {
-//        Configuration.baseUrl = "https://demoqa.com";
-//        Configuration.pageLoadStrategy = "eager";
-
 }

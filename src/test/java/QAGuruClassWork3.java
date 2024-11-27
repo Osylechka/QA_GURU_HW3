@@ -1,5 +1,10 @@
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 
 import javax.print.DocFlavor;
 
@@ -7,7 +12,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class QAGuruHW3 {
+public class QAGuruClassWork3 {
 
 int result;
 

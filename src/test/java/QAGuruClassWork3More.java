@@ -35,3 +35,6 @@ public class QAGuruClassWork3More {
         $("#output #permanentAddress").shouldHave(text("Earth"));
     }
 }
+
+//$("h1") - обращение к css селектора -- $("#id")
+//$x(//"h1") - обращение к Xpath селектору -- $x("//"[@id="id]")

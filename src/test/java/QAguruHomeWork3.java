@@ -78,5 +78,4 @@ public class QAguruHomeWork3 {
         //закрытие модалки
         $("#closeLargeModal").click();
     }
-
 }

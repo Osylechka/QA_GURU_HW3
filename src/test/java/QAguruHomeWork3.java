@@ -1,6 +1,8 @@
 package tests;
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -16,18 +18,18 @@ public class QAguruHomeWork3 {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.holdBrowserOpen = true;
-        Configuration.timeout = 5000; // 4000 по умолчанию
     }
 
-    @AfterAll
-    static void closeWebDriver() {
-        switchTo().window(getWebDriver().getWindowHandle()).close();
+    @AfterEach
+    void tearDown() {
+        Selenide.closeWebDriver();
     }
 
     @Test
     void testAutomationPracticeForm() {
         open("/automation-practice-form");
+        executeJavaScript("$('#fixedban').remove()"); //чтоб тест не упал из-за всплывающих баннеров
+        executeJavaScript("$('footer').remove()");
 
         //заполнение полей с личными данными
         $("#firstName").setValue("Oss");
@@ -78,4 +80,5 @@ public class QAguruHomeWork3 {
         //закрытие модалки
         $("#closeLargeModal").click();
     }
+
 }
